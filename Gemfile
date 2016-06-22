@@ -45,7 +45,7 @@ group :development do
   gem 'spring'
 end
 
-
+gem 'html2haml'
 gem 'haml-rails'
 gem 'hamlit'
 gem 'bootstrap-sass'
@@ -58,6 +58,8 @@ gem 'font-awesome-sass'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'responders'
 
 group :development do
   gem 'better_errors'

@@ -180,6 +180,8 @@ GEM
     rdoc (4.2.2)
       json (~> 1.4)
     redcarpet (3.3.4)
+    responders (2.2.0)
+      railties (>= 4.2.0, < 5.1)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
     sass (3.4.22)
@@ -236,6 +238,7 @@ DEPENDENCIES
   font-awesome-sass
   haml-rails
   hamlit
+  html2haml
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
@@ -247,6 +250,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.4)
   redcarpet
+  responders
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
