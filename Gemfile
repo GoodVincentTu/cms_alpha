@@ -54,6 +54,11 @@ gem 'pry-byebug'
 gem 'puma'
 gem 'redcarpet'
 gem 'font-awesome-sass'
+
+gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
+
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'

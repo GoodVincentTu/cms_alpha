@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :categories, only: [:show]
   resources :pages, only: [:show]
 
   namespace :admin do
     resources :pages  # /admin/pages
+    resources :categories
   end
 
   # select pages with slug
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
- root 'admin/pages#index'
+  root 'admin/pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
