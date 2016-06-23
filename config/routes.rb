@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :pages, only: [:show]
 
   namespace :admin do
+    resources :menus, except: [:show]
     resources :pages  # /admin/pages
     resources :categories
   end
