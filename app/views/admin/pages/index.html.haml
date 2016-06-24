@@ -17,4 +17,7 @@
           %code= url_for_page page
         %td= link_to 'Destroy', admin_page_path(page), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%p= link_to 'New Page', new_admin_page_path, class: "btn btn-primary"
+%p
+  = link_to 'New Page', new_admin_page_path, class: "btn btn-primary"
+  -Type.all.each do |type|
+    = link_to "New #{type.name}", new_admin_page_path(type: type.name), class: "btn  btn-default"
