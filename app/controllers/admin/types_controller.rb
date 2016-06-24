@@ -44,7 +44,7 @@ module Admin
     protected
 
     def type_params
-      params.require(:type).permit(:name, :field_definitions_attributes => [ :key, :id] )
+      params.require(:type).permit(:name)
     end
   end
 end
