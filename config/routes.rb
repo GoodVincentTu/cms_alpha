@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # You can have the root of your site routed with "root"
+  root to: redirect(Setting.where(key: "homepage").first.value)
 
   mount Ckeditor::Engine => '/ckeditor'
   resources :categories, only: [:show]
@@ -9,7 +11,9 @@ Rails.application.routes.draw do
     resources :menus, except: [:show]
     resources :pages  # /admin/pages
     resources :categories
-    resources :settings, only: [ :index, :update ]
+    # resources :settings, only: [ :index, :update ]
+    get "settings" => "settings#index"
+    put "settings" => "settings#update"
   end
 
   # select pages with slug
@@ -18,9 +22,6 @@ Rails.application.routes.draw do
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'admin/pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
