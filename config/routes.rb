@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :menus, except: [:show]
     resources :pages  # /admin/pages
     resources :categories
+    resources :settings, only: [ :index, :update ]
   end
 
   # select pages with slug

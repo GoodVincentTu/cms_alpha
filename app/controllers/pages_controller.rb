@@ -10,7 +10,7 @@ class PagesController < ContentController
   def template_to_render
     if template_exists?("page-#{@page.id}")
       "page-#{@page.id}"
-    elsif template_exists?("page-#{@page.type.name}")
+    elsif template_exists?("page-#{@page.name}")
     	"page-#{@page.type.name}"
     else
       "page"
