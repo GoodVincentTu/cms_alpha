@@ -61,6 +61,8 @@ gem 'mini_magick'
 
 gem 'responders'
 
+gem 'devise'
+
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
